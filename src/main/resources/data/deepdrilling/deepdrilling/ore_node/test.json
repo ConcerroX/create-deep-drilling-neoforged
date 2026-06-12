@@ -1,0 +1,14 @@
+{
+  "node_block": "minecraft:grass_block",
+  "earth_loot": [
+    {
+      "data": {
+        "type": "item",
+        "ingredient": {
+          "item": "minecraft:jungle_wood"
+        }
+      },
+      "weight": 1
+    }
+  ]
+}

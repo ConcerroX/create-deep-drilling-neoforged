@@ -17,6 +17,15 @@ loom {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
     }
+
+    runs {
+        data {
+            data()
+            programArgs "--all", "--mod", archives_base_name
+            programArgs "--existing", existingResources.absolutePath
+            programArgs "--output", generatedResources.absolutePath
+        }
+    }
 }
 
 configurations {

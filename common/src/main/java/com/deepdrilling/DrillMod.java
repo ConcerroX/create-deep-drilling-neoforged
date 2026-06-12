@@ -16,15 +16,12 @@ public class DrillMod {
 
 
     public static void init() {
-        LOGGER.info("{} initializing! Create version: {} on platform: {}", NAME, Create.VERSION, ExpectPlatform.platformName());
-
         DrillCreativeTab.register();
         DrillCreativeTab.setCreativeTab();
         DBlocks.init(); // hold registrate in a separate class to avoid loading early on forge
         DItems.init();
         DBlockEntities.init();
 
-        // there are probably several better ways to do this whole process but this is the one I stumbled upon that actually worked
         DDrillHeads.registerBlockEntity();
     }
 
@@ -38,4 +35,5 @@ public class DrillMod {
     public static ResourceLocation id(String path) {
         return new ResourceLocation(MOD_ID, path);
     }
+
 }
